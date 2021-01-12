@@ -43,3 +43,5 @@ G4History.macro
 *.exe
 *.out
 *.app
+
+.DS_Store
