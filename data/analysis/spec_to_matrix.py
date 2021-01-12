@@ -107,14 +107,21 @@ if __name__ == "__main__":
     response_outdir = Path("response_export")
     response_outdir.mkdir(exist_ok=True)
 
-    energy_grid = np.arange(50, 1e4, 10, dtype=int)
-    nevents = np.linspace(6e5, 3e6, len(energy_grid), dtype=np.int)
+    #Fabio energies used
+    #energy_grid = np.arange(50, 1e4, 10, dtype=int)
+    #nevents = np.linspace(6e5, 3e6, len(energy_grid), dtype=np.int)
 
-    energy_grid = np.append(energy_grid, [int(1.2e4), int(1.5e4), int(2e4)])
-    nevents = np.append(nevents, [int(3e6), int(3e6), int(3e6)])
+    #energy_grid = np.append(energy_grid, [int(1.2e4), int(1.5e4), int(2e4)])
+    #nevents = np.append(nevents, [int(3e6), int(3e6), int(3e6)])
 
+    energy_grid = np.arange(50,2340,10)
+    nevents = np.zeros(len(energy_grid))
+    nevents.fill(100000)
+
+    #What is this?
     fwhm_pars = np.array([60.6499, 0.458252, 0.000265552])
 
+    #What is this?
     energy_out = np.arange(energy_grid[0], 21000, 10)
     energy_out_uncut = np.arange(0, 21000, 10)
     # response mat. with x: incident energy; y: outgoing
@@ -126,7 +133,8 @@ if __name__ == "__main__":
                                 "fe", "se", "de", "511"])
     eff["E"] = energy_grid
 
-    specdir = Path("from_geant")
+    #specdir = Path("from_geant")
+    specdir = Path("mama_spectra")
     # fig, ax = plt.subplots()
     # fig_plain, ax_plain = plt.subplots()
 
@@ -167,11 +175,11 @@ if __name__ == "__main__":
     _, ax, fig = respmat.plot(title="response unnormalized",
                               scale="log", vmin=1)
     ax.set_ylabel(r"$E_{incident}$ [KeV]")
-    fig.savefig(figs_dir/f"{fn}.png")
+    #fig.savefig(figs_dir/f"{fn}.png")
     # respmat.save(response_outdir/f"{fn}.m") # too large for mama
     respmat.save(response_outdir/f"{fn}.txt")
     fig.clear()
-    plt.close(fig)
+    #plt.close(fig)
 
     fn = "response_norm_efficiency"
     mat = respmat.copy()
