@@ -47,7 +47,8 @@ string outdir = "mama_spectra";
 // get list of files matching certain criterium
 
 string fname_tmp;
-system("xterm -e 'find root_files/*.root > tmp.txt'");
+//system("xterm -e 'find root_files/*.root > tmp.txt'");
+system("xterm -e 'find *.root > tmp.txt'");
 ifstream tmpfile("tmp.txt", ios::in);
 while(tmpfile>>fname_tmp)
 {
