@@ -32,6 +32,7 @@
 #include "G4NistManager.hh"
 #include "G4RunManager.hh"
 
+#define nEntries 2
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
 
@@ -293,7 +294,7 @@ void  OCLLaBr3::CreateSolids()
 
 void OCLLaBr3::SetOpticalProperties() {
 	// at the moment taken from the Scintiallator example
-	G4int nEntries = 2;
+	//G4int nEntries = 2;
 
 	// 1eV -> 1.2399 µm; 7eV -> 0.1771µm // TODO more detailed; adopt all of them
 	G4double PhotonEnergy[nEntries] = {1.0*eV,7.0*eV};
