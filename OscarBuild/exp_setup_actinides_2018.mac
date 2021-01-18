@@ -1,0 +1,75 @@
+#Define detectors that should be included 
+/OCL/det/useCSGOldTC true
+/OCL/det/useCSGOldTarget true
+/OCL/det/useCSGSiRi true
+/OCL/det/useCSGNiff true 
+
+#Set by hand new detector chamber to false
+/OCL/det/useCADTargetChamber false
+/OCL/det/useCADFrameOuter true #true if precise results
+/OCL/det/useCADSiRi false
+/OCL/det/useCADTargetsOnWheel false
+
+#Set LaBr in use
+/OCL/det/oscar/setLaBrUse 1 true
+/OCL/det/oscar/setLaBrUse 2 true
+/OCL/det/oscar/setLaBrUse 3 true
+/OCL/det/oscar/setLaBrUse 4 true
+/OCL/det/oscar/setLaBrUse 5 true
+/OCL/det/oscar/setLaBrUse 6 true
+/OCL/det/oscar/setLaBrUse 7 true
+/OCL/det/oscar/setLaBrUse 8 true
+/OCL/det/oscar/setLaBrUse 9 true
+/OCL/det/oscar/setLaBrUse 10 true
+/OCL/det/oscar/setLaBrUse 11 true
+/OCL/det/oscar/setLaBrUse 12 true
+/OCL/det/oscar/setLaBrUse 13 true
+/OCL/det/oscar/setLaBrUse 14 true
+/OCL/det/oscar/setLaBrUse 15 true
+/OCL/det/oscar/setLaBrUse 16 true
+/OCL/det/oscar/setLaBrUse 17 true
+/OCL/det/oscar/setLaBrUse 18 false
+/OCL/det/oscar/setLaBrUse 19 true 
+/OCL/det/oscar/setLaBrUse 20 true
+/OCL/det/oscar/setLaBrUse 21 true
+/OCL/det/oscar/setLaBrUse 22 true
+/OCL/det/oscar/setLaBrUse 23 true
+/OCL/det/oscar/setLaBrUse 24 true
+/OCL/det/oscar/setLaBrUse 25 true
+/OCL/det/oscar/setLaBrUse 26 false
+/OCL/det/oscar/setLaBrUse 27 true 
+/OCL/det/oscar/setLaBrUse 28 true
+/OCL/det/oscar/setLaBrUse 29 true
+/OCL/det/oscar/setLaBrUse 30 true
+
+#Set LaBr distances
+/OCL/det/oscar/setLaBrDist 1 20.0
+/OCL/det/oscar/setLaBrDist 2 20.0
+/OCL/det/oscar/setLaBrDist 3 20.0
+/OCL/det/oscar/setLaBrDist 4 20.0
+/OCL/det/oscar/setLaBrDist 5 20.0
+/OCL/det/oscar/setLaBrDist 6 20.0
+/OCL/det/oscar/setLaBrDist 7 20.0
+/OCL/det/oscar/setLaBrDist 8 20.0
+/OCL/det/oscar/setLaBrDist 9 40 #Pulled back to 40 cm
+/OCL/det/oscar/setLaBrDist 10 20.0
+/OCL/det/oscar/setLaBrDist 11 20.0
+/OCL/det/oscar/setLaBrDist 12 20.0
+/OCL/det/oscar/setLaBrDist 13 20.0
+/OCL/det/oscar/setLaBrDist 14 20.0
+/OCL/det/oscar/setLaBrDist 15 20.0
+/OCL/det/oscar/setLaBrDist 16 20.0
+/OCL/det/oscar/setLaBrDist 17 20.0
+#/OCL/det/oscar/setLaBrDist 18 1000.0
+/OCL/det/oscar/setLaBrDist 19 20.0
+/OCL/det/oscar/setLaBrDist 20 20.0
+/OCL/det/oscar/setLaBrDist 21 20.0
+/OCL/det/oscar/setLaBrDist 22 20.0
+/OCL/det/oscar/setLaBrDist 23 20.0
+/OCL/det/oscar/setLaBrDist 24 20.0
+/OCL/det/oscar/setLaBrDist 25 20.0
+#/OCL/det/oscar/setLaBrDist 26 1000.0
+/OCL/det/oscar/setLaBrDist 27 20.0
+/OCL/det/oscar/setLaBrDist 28 20.0
+/OCL/det/oscar/setLaBrDist 29 20.0
+/OCL/det/oscar/setLaBrDist 30 20.0
