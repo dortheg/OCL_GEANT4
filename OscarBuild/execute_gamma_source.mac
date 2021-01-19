@@ -1,0 +1,25 @@
+#All commands for executing a run of a gamma source 
+
+#Detectors in use and their target to detector distance
+/control/execute exp_setup_actinides_2018.mac
+#/control/execute setup_rad_source.mac
+
+/run/initialize
+
+#Particle type
+/gps/particle gamma
+/gps/number 1
+
+#Particle source distr
+/gps/pos/type Plane 
+/gps/pos/shape Ellipse
+/gps/pos/centre 0. 0. 0. mm
+/gps/pos/halfx 0.75 mm
+/gps/pos/halfy 1.25 mm
+
+/gps/energy 7000.0 keV
+/gps/ang/type iso
+
+#/OCL/setOutName ../data/execute_7000keV.root
+/OCL/setOutName test3.root
+/run/beamOn 10
