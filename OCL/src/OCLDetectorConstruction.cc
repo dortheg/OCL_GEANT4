@@ -73,6 +73,8 @@ OCLDetectorConstruction::OCLDetectorConstruction()
      fUseCSGNiff(false)
 {
 
+
+
 	for(G4int i=0; i<numberOf_OCLLaBr3; i++){
     fOCLLaBr3_Distance[i] = 16.3*cm;
 
@@ -150,9 +152,9 @@ G4VPhysicalVolume* OCLDetectorConstruction::ConstructVolumes()
 										  false,                //no boolean operation
 										  0);                   //copy number
 
-	////////////////////////
+	////////////////////////////////////
 	// Positinging
-	////////////////////////
+	///////////////////////////////////
 
 	SetPlacementParameters();
 
@@ -168,18 +170,25 @@ G4VPhysicalVolume* OCLDetectorConstruction::ConstructVolumes()
 	//
 
 	for(G4int i=0; i<numberOf_OCLLaBr3; i++){
-	if( fOCLLaBr3_presence[i])
-		{
-		copynumber=i;
-		labr3[i] = new OCLLaBr3(fMessenger_labr);
-		labr3[i]->SetRotation(rotmOCLLaBr3[i]);
-		labr3[i]->SetPosition(positionOCLLaBr3[i]);
-		labr3[i]->Placement(copynumber,  physiWorld, pSurfChk);
+	 if( fOCLLaBr3_presence[i]){
+		  copynumber=i;
+		  labr3[i] = new OCLLaBr3(fMessenger_labr);
+      
+      G4double detectorHalfinclPMT = labr3[i]->GetDetectorHalfinclPMT();
+
+      G4double r = fOCLLaBr3_Distance[i] + detectorHalfinclPMT;
+      positionOCLLaBr3[i] = G4ThreeVector( sin(OCLLaBr3_theta[i]) * cos(OCLLaBr3_phi[i]) * r, sin(OCLLaBr3_theta[i]) * sin(OCLLaBr3_phi[i]) * r, cos(OCLLaBr3_theta[i]) * r);
+      
+      positionOCLLaBr3[i] += G4ThreeVector(30.0*cm,0,0);
+
+      labr3[i]->SetRotation(rotmOCLLaBr3[i]);
+      labr3[i]->SetPosition(positionOCLLaBr3[i]);
+      labr3[i]->Placement(copynumber,  physiWorld, pSurfChk);
 		}
 	}
 
 
-	///////////
+	////////////////////////////////////////////////
 
 	//
 	// Collimator
@@ -289,10 +298,11 @@ G4VPhysicalVolume* OCLDetectorConstruction::ConstructVolumes()
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
 
 G4ThreeVector SpherToCatG4three(G4double r,G4double theta,G4double phi){
-	return r * G4ThreeVector( sin(theta) * cos(phi),
-					   sin(theta) * sin(phi),
-					   cos(theta));
+  return G4ThreeVector( sin(theta) * cos(phi) * r,
+					   sin(theta) * sin(phi) * r,
+					   cos(theta) * r);
 }
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
 
@@ -309,6 +319,7 @@ void OCLDetectorConstruction::SetPlacementParameters()
   // fOCLLaBr3_Distance[0]		= 16.3*cm;
   OCLLaBr3_theta[00]			= 180.000000*deg;
   OCLLaBr3_phi[0]			= 180.000000*deg;
+
 
   //Det. number 1 at OCL:
   // fOCLLaBr3_presence[ 1]		= true;
@@ -530,11 +541,8 @@ void OCLDetectorConstruction::SetPlacementParameters()
 
 
   for(G4int i=0; i<numberOf_OCLLaBr3; i++){
-
-  	G4double disttoLaBr3_face = fOCLLaBr3_Distance[i];
   	// disttoCollHalf =  fOCLLaBr3_Distance[i] - offsettoCollimator;
 
-  	positionOCLLaBr3[i] = SpherToCatG4three(disttoLaBr3_face, OCLLaBr3_theta[i], OCLLaBr3_phi[i]);
   	// if (!rotmOCLLaBr3[i]){
   			// for(G4int i=0; i<numberOf_OCLLaBr3; i++){
     	rotmOCLLaBr3[i] = G4RotationMatrix();

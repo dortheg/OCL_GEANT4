@@ -42,6 +42,7 @@ public:
   void SetPosition( G4ThreeVector );
   void SetRotation( G4RotationMatrix );
   void Placement(G4int, G4VPhysicalVolume*, G4bool);
+  G4double GetDetectorHalfinclPMT();
 
 // public:
   G4double GetCoatingPlasticThickness() { return coatingPlasticThickness; };

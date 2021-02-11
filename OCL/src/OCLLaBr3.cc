@@ -73,6 +73,12 @@ void OCLLaBr3::SetRotation(G4RotationMatrix thisRot) {
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
 
+G4double OCLLaBr3::GetDetectorHalfinclPMT() {
+  return detectorHalfinclPMT;
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
+
 	//some default Clover detector parameters
 	// --> Parameter file
 
@@ -418,8 +424,10 @@ void OCLLaBr3::Placement(G4int copyNo, G4VPhysicalVolume* physiMother, G4bool ch
 
 	// Create the transformation vector to mother volume
 	// tranlation: distance middle + halflength = distance to face
-	fTranslatePos.setR(fTranslatePos.getR()
-	                   + detectorHalfinclPMT);
+	
+	//fTranslatePos.setR(fTranslatePos.getR()
+	//                   + detectorHalfinclPMT);
+	
 	G4Transform3D transDetector = G4Transform3D(fRotation, fTranslatePos);
 
 	G4int copyNoSub = 0; // copy number for the sub elements (could also be copyNo)
