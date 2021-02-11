@@ -70,6 +70,8 @@ class OCLDetectorConstruction : public G4VUserDetectorConstruction
     G4ThreeVector positionOCLLaBr3[numberOf_OCLLaBr3];
     G4ThreeVector positionCollimator[numberOf_OCLLaBr3];
 
+    G4double LaBrTranslation_LeftRight[numberOf_OCLLaBr3];
+
     bool fUseCSGOldTargetChamber;
     bool fUseCSGOldTarget;
     bool fUseCSGRadSource;
