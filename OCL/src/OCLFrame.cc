@@ -262,99 +262,133 @@ G4double distToHexagonHalf  = 247.66 *mm + 10*mm; // dist. to inner side of Hexa
 
 frameHexagon_theta[ 0]	= 142.622528*deg;
 frameHexagon_phi[ 0]	= 144.000134*deg;
+HexagonTranslation_LeftRight[0] = -1.0;
 
 frameHexagon_theta[ 1]	= 142.622561*deg;
 frameHexagon_phi[ 1]	= 216.000153*deg;
+HexagonTranslation_LeftRight[1] = -1.0;
 
 frameHexagon_theta[ 2]	= 142.622535*deg;
 frameHexagon_phi[ 2]	= 288.000000*deg;
+HexagonTranslation_LeftRight[2] = 1.0;
 
 frameHexagon_theta[ 3]	= 142.622561*deg;
 frameHexagon_phi[ 3]	= 359.999847*deg;
+HexagonTranslation_LeftRight[3] = 1.0;
 
 frameHexagon_theta[ 4]	= 142.622528*deg;
 frameHexagon_phi[ 4]	= 71.999866*deg;
+HexagonTranslation_LeftRight[4] = 1.0;
 
 frameHexagon_theta[ 5]	= 100.812191*deg;
 frameHexagon_phi[ 5]	= 144.000046*deg;
+HexagonTranslation_LeftRight[5] = -1.0;
 
 frameHexagon_theta[ 6]	= 79.187559*deg;
 frameHexagon_phi[ 6]	= 180.000044*deg;
+HexagonTranslation_LeftRight[6] = -1.0;
 
 frameHexagon_theta[ 7]	= 100.812208*deg;
 frameHexagon_phi[ 7]	= 215.999956*deg;
+HexagonTranslation_LeftRight[7] = -1.0;
 
 frameHexagon_theta[ 8]	= 79.187575*deg;
 frameHexagon_phi[ 8]	= 251.999954*deg;
+HexagonTranslation_LeftRight[8] = -1.0;
 
 frameHexagon_theta[ 9]	= 100.812175*deg;
 frameHexagon_phi[ 9]	= 288.000000*deg;
+HexagonTranslation_LeftRight[9] = 1.0;
 
 frameHexagon_theta[10]	= 79.187575*deg;
 frameHexagon_phi[10]	= 324.000046*deg;
+HexagonTranslation_LeftRight[10] = 1.0;
 
 frameHexagon_theta[11]	= 100.812208*deg;
 frameHexagon_phi[11]	= 0.000044*deg;
+HexagonTranslation_LeftRight[11] = 1.0;
 
 frameHexagon_theta[12]	= 79.187559*deg;
 frameHexagon_phi[12]	= 35.999956*deg;
+HexagonTranslation_LeftRight[12] = 1.0;
 
 frameHexagon_theta[13]	= 100.812191*deg;
 frameHexagon_phi[13]	= 71.999954*deg;
+HexagonTranslation_LeftRight[13] = 1.0;
 
 frameHexagon_theta[14]	= 79.187591*deg;
 frameHexagon_phi[14]	= 108.000000*deg;
+HexagonTranslation_LeftRight[14] = -1.0;
 
 frameHexagon_theta[15]	= 37.377321*deg;
 frameHexagon_phi[15]	= 108.000000*deg;
+HexagonTranslation_LeftRight[15] = -1.0;
 
 frameHexagon_theta[16]	= 37.377294*deg;
 frameHexagon_phi[16]	= 36.000153*deg;
+HexagonTranslation_LeftRight[16] = 1.0;
 
 frameHexagon_theta[17]	= 37.377328*deg;
 frameHexagon_phi[17]	= 324.000134*deg;
+HexagonTranslation_LeftRight[17] = 1.0;
 
 frameHexagon_theta[18]	= 37.377328*deg;
 frameHexagon_phi[18]	= 251.999866*deg;
+HexagonTranslation_LeftRight[18] = -1.0;
 
 frameHexagon_theta[19]	= 37.377294*deg;
 frameHexagon_phi[19]	= 179.999847*deg;
+HexagonTranslation_LeftRight[19] = -1.0;
+
+
 
 framePentagon_theta[ 0]	= 180.000000*deg;
 framePentagon_phi[ 0]	= 180.000000*deg;
+PentagonTranslation_LeftRight[0] = 0.0;
 
 framePentagon_theta[ 1]	= 116.564844*deg;
 framePentagon_phi[ 1]	= 108.000000*deg;
+PentagonTranslation_LeftRight[1] = -1.0;
 
 framePentagon_theta[ 2]	= 116.564908*deg;
 framePentagon_phi[ 2]	= 180.000045*deg;
+PentagonTranslation_LeftRight[2] = -1.0;
 
 framePentagon_theta[ 3]	= 116.564893*deg;
 framePentagon_phi[ 3]	= 252.000011*deg;
+PentagonTranslation_LeftRight[3] = -1.0;
 
 framePentagon_theta[ 4]	= 116.564893*deg;
 framePentagon_phi[ 4]	= 323.999989*deg;
+PentagonTranslation_LeftRight[4] = 1.0;
 
 framePentagon_theta[ 5]	= 116.564908*deg;
 framePentagon_phi[ 5]	= 35.999955*deg;
+PentagonTranslation_LeftRight[5] = 1.0;
 
 framePentagon_theta[ 6]	= 0.000000*deg;
 framePentagon_phi[ 6]	= 0.000000*deg;
+PentagonTranslation_LeftRight[6] = 0.0;
 
 framePentagon_theta[ 7]	= 63.434900*deg;
 framePentagon_phi[ 7]	= 72.000011*deg;
+PentagonTranslation_LeftRight[7] = 1.0;
 
 framePentagon_theta[ 8]	= 63.434885*deg;
 framePentagon_phi[ 8]	= 0.000045*deg;
+PentagonTranslation_LeftRight[8] = 1.0;
 
 framePentagon_theta[ 9]	= 63.434949*deg;
 framePentagon_phi[ 9]	= 288.000000*deg;
+PentagonTranslation_LeftRight[9] = 1.0;
 
 framePentagon_theta[10]	= 63.434885*deg;
 framePentagon_phi[10]	= 215.999955*deg;
+PentagonTranslation_LeftRight[10] = -1.0;
 
 framePentagon_theta[11]	= 63.434900*deg;
 framePentagon_phi[11]	= 143.999989*deg;
+PentagonTranslation_LeftRight[11] = -1.0;
 
 double rot1 = 36.*deg;
 
@@ -369,6 +403,7 @@ rotmPentagon[11].rotateZ(rot1);
 for(G4int i=0; i<numberOf_Pentagons; i++){
 
 	positionPentagon[i] = SpherToCatG4three(distToPentagonHalf, framePentagon_theta[i], framePentagon_phi[i]);
+	positionPentagon[i] += G4ThreeVector(PentagonTranslation_LeftRight[i]*30.0*cm,0,0);
 	rotmPentagon[i].rotateY(framePentagon_theta[i]);
 	rotmPentagon[i].rotateZ(framePentagon_phi[i]);
 }
@@ -398,6 +433,7 @@ rotmHexagon[19].rotateZ(30*deg);
 
 for(G4int i=0; i<numberOf_Hexagons; i++){
 	positionHexagon[i] = SpherToCatG4three(distToHexagonHalf, frameHexagon_theta[i], frameHexagon_phi[i]);
+	positionHexagon[i] += G4ThreeVector(HexagonTranslation_LeftRight[i]*30.0*cm,0,0);
 	rotmHexagon[i].rotateY(frameHexagon_theta[i]);
 	rotmHexagon[i].rotateZ(frameHexagon_phi[i]);
 }

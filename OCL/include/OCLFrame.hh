@@ -59,6 +59,10 @@ private:
   G4RotationMatrix rotmPentagon[numberOf_Pentagons];
   G4ThreeVector positionPentagon[numberOf_Pentagons];
 
+  G4double PentagonTranslation_LeftRight[numberOf_Pentagons];
+  G4double HexagonTranslation_LeftRight[numberOf_Hexagons];
+
+
   //
   // Elements & Materials
   //
