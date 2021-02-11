@@ -72,6 +72,8 @@ class OCLDetectorConstruction : public G4VUserDetectorConstruction
 
     G4double LaBrTranslation_LeftRight[numberOf_OCLLaBr3];
 
+    G4double x_translation = 30.0*cm;
+
     bool fUseCSGOldTargetChamber;
     bool fUseCSGOldTarget;
     bool fUseCSGRadSource;

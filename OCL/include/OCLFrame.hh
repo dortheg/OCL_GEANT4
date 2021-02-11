@@ -62,6 +62,8 @@ private:
   G4double PentagonTranslation_LeftRight[numberOf_Pentagons];
   G4double HexagonTranslation_LeftRight[numberOf_Hexagons];
 
+  G4double x_translation = 30.0*cm;
+
 
   //
   // Elements & Materials

@@ -403,7 +403,7 @@ rotmPentagon[11].rotateZ(rot1);
 for(G4int i=0; i<numberOf_Pentagons; i++){
 
 	positionPentagon[i] = SpherToCatG4three(distToPentagonHalf, framePentagon_theta[i], framePentagon_phi[i]);
-	positionPentagon[i] += G4ThreeVector(PentagonTranslation_LeftRight[i]*30.0*cm,0,0);
+	positionPentagon[i] += G4ThreeVector(PentagonTranslation_LeftRight[i]*x_translation,0,0);
 	rotmPentagon[i].rotateY(framePentagon_theta[i]);
 	rotmPentagon[i].rotateZ(framePentagon_phi[i]);
 }
@@ -433,7 +433,7 @@ rotmHexagon[19].rotateZ(30*deg);
 
 for(G4int i=0; i<numberOf_Hexagons; i++){
 	positionHexagon[i] = SpherToCatG4three(distToHexagonHalf, frameHexagon_theta[i], frameHexagon_phi[i]);
-	positionHexagon[i] += G4ThreeVector(HexagonTranslation_LeftRight[i]*30.0*cm,0,0);
+	positionHexagon[i] += G4ThreeVector(HexagonTranslation_LeftRight[i]*x_translation,0,0);
 	rotmHexagon[i].rotateY(frameHexagon_theta[i]);
 	rotmHexagon[i].rotateZ(frameHexagon_phi[i]);
 }

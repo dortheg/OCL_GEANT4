@@ -181,7 +181,7 @@ G4VPhysicalVolume* OCLDetectorConstruction::ConstructVolumes()
       positionOCLLaBr3[i] = G4ThreeVector( sin(OCLLaBr3_theta[i]) * cos(OCLLaBr3_phi[i]) * r, sin(OCLLaBr3_theta[i]) * sin(OCLLaBr3_phi[i]) * r, cos(OCLLaBr3_theta[i]) * r);
       
       //Translation along x-axis
-      positionOCLLaBr3[i] += G4ThreeVector(LaBrTranslation_LeftRight[i]*30.0*cm,0,0);
+      positionOCLLaBr3[i] += G4ThreeVector(LaBrTranslation_LeftRight[i]*x_translation,0,0);
 
       labr3[i]->SetRotation(rotmOCLLaBr3[i]);
       labr3[i]->SetPosition(positionOCLLaBr3[i]);
