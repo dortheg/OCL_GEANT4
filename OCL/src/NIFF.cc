@@ -89,11 +89,11 @@ void  NIFF::CreateSolids() {
   	Hence we need to first compute the height of our trapezoid.
   */
 
-  pos1 = G4ThreeVector(0, 0, +5*cm);					// position of the shape
+  pos1 = G4ThreeVector(0, 0, -5*cm);					// position of the shape
   // G4RotationMatrix rMat;									// rotation matrix around X axis
   G4double phiX = 180. *deg;
   G4double phiZ = 45. *deg;
-  //  	rMat.rotateX(phiX);
+  rMat.rotateX(phiX);
   rMat.rotateZ(phiZ);
 
 
